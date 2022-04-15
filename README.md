@@ -29,7 +29,11 @@ Encountered error
 ❗  /usr/local/bin/kubectl is version 1.21.5, which may have incompatibilites with Kubernetes 1.23.3.
     ▪ Want kubectl v1.23.3? Try 'minikube kubectl -- get pods -A'
 🏄  Done! kubectl is now configured to use "minikube" cluster and "default" namespace by default
+```
 
 Possible resolution here https://github.com/kubernetes/minikube/issues/12950
 
+`docker network create --subnet 192.168.57.0/24 --driver bridge minikube`
+
+This seems to have resoved the network issue.
 
