@@ -13,6 +13,7 @@ app.consoles = {}
 
 
 class WebConsole:
+
     def __init__(self):
         self.console = code.InteractiveConsole()
 
@@ -26,7 +27,7 @@ class WebConsole:
         return {'output': str(output.getvalue())}
 
 
-@app.route('/api/<uname>/run', methods=['POST'])
+@app.route('/api/<uname>/run/', methods=['POST'])
 def run(uname):
     if not uname in app.consoles:
         app.consoles[uname] = WebConsole()
